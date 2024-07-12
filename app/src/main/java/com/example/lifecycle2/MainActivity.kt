@@ -1,7 +1,9 @@
 package com.example.lifecycle2
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +17,15 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate called")
 
         setContentView(R.layout.activity_main)
+
+        val btnOpenSecondActivity = findViewById<Button>(R.id.btnOpenSecondActivity)
+        btnOpenSecondActivity.setOnClickListener{
+            val intent=Intent(this.applicationContext,activity_second::class.java)
+
+            intent.putExtra("key","value")
+            startActivity(intent)
+            }
+
 
         }
     override fun onStart() {

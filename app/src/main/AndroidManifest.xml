@@ -13,6 +13,9 @@
         android:theme="@style/Theme.LifeCycle2"
         tools:targetApi="31">
         <activity
+            android:name=".activity_third"
+            android:exported="false" />
+        <activity
             android:name=".activity_second"
             android:exported="false" />
         <activity
